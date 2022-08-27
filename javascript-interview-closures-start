@@ -1,0 +1,20 @@
+// javascript-interview-closures-start
+const privateCounter = () => {
+  let counter = 0;
+  return {
+    increment: (val =1) => {
+    counter += val;
+  },
+    getValue:() => {
+      return counter;
+    },
+  };
+};
+
+const counter = privateCounter();
+console.log(counter.getValue());
+counter.increment();
+console.log(counter.getValue());
+counter.increment();
+console.log(counter.getValue());
+console.dir(counter.getValue);
